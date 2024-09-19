@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Responsivo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana;
+            background-color: whitesmoke;
+        }
+
+        .topo {
+            background-color: pink;
+            padding: 4px;
+            text-align: center;
+        }
+
+        .menu {
+            background-color: yellow;
+
+        }
+
+        .conteudo {
+            background-color: aquamarine;
+            padding: 4px;
+
+        }
+
+        .um {
+            background-color: rgb(167, 164, 161);
+        }
+
+
+        .dois {
+            background-color: rgb(84, 241, 84);
+        }
+
+        .tres {
+            background-color: rgb(240, 71, 71);
+        }
+
+        .rodape {
+            background-color: purple;
+        }
+
+        /* Regra de CSS reset */
+        body,
+        h1,
+        h2,
+        p {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* Etapa 2: regras CONDICIONAIS, de uso RESPONSIVO */
+
+        /* Media Query ou Breakpoint */
+
+        @media screen and (min-width: 600px) {
+            .topo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .menu {
+                width: 50%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            h1 {
+                background-color: white;
+            }
+
+            .conteudo {
+                display: flex;
+                /* Flex-wrap esta habilitando a "quebra",ou seja,quando não tiver mais espaço para colocar os artigos lado a lado, o artigo que estiver sobrando irá para baixo */
+                flex-wrap: wrap;
+
+            }
+
+            .um {
+                width: 30%;
+            }
+
+            .dois {
+                width: 70%;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+
+            h1 { font-size: 48px; 
+            display: flex;
+        align-items: center;}
+            a,h2 { font-size: 24px;}
+            p{
+                font-size: 18px;
+                line-height: 2;
+            }
+            .topo {
+                height: 100px;
+                font-size: 48px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .conteudo {
+                display: flex;
+                justify-content: space-around;
+                padding: 10px ;
+                font-size: 24px;
+            }
+
+            .um {
+                width: 33%;
+                padding: 33px;
+            }
+
+            .dois {
+                width: 33%;
+                padding: 33px;
+            }
+
+            .tres {
+                width: 33%;
+                padding: 33px;
+                }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="topo">
+        <h1>Games</h1>
+        <nav class="menu">
+            <a href="">Link 1</a>
+            <a href="">Link 2</a>
+            <a href="">Link 3</a>
+        </nav>
+    </header>
+
+    <main class="conteudo">
+        <article class="um">
+            <h2>Playstation 🎮</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi quod illo doloremque a distinctio
+                dolores ad sint, sapiente quam vero.</p>
+        </article>
+
+        <article class="dois">
+            <h2>Xbox 👽</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ullam exercitationem itaque alias, tempore
+                consequuntur repellat quia sit non vitae.</p>
+        </article>
+
+        <article class="tres">
+            <h2>Nintendo 🍄</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci autem molestias aliquid pariatur.
+                Facere deserunt soluta aliquid repellat ex consequatur?</p>
+        </article>
+    </main>
+
+    <footer class="rodape">
+        <h2>Exemplo de Site/Layout</h2>
+    </footer>
+
+</body>
+
+</html>

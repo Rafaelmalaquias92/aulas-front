@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desing Responsivo</title>
+</head>
+
+<body>
+    <style>
+        /* MOBILE FIRST */
+
+        /* Etapa 1: regras de uso COMUM/GERAL */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        body {
+            font-family: Verdana;
+        }
+
+        h1 {
+            color: darkred;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        /* Etapa 2: Media Query (Consulta de Mídia)
+ 
+        Regras de uso CONDICIONAL/RESPONSIVO */
+
+        @media screen and (min-width: 600px) {
+
+
+
+            body {
+                background-color: rgb(4, 176, 233);
+            }
+
+
+            h1 {
+                text-align: center;
+            }
+
+
+
+            p {
+                font-size: 26px;
+            }
+
+
+        }
+
+        @media screen and (min-width: 770px) {
+
+
+
+            .exemplo {
+
+
+
+                background-color: white;
+                width: 100%;
+                margin: auto;
+                padding: 6px 6px 6px;
+                border: solid 3px red;
+
+
+
+            }
+        }
+
+        @media screen and (min-width: 898px) {
+
+
+
+            h1 {
+
+                text-transform: uppercase;
+                border-left: 4px solid black;
+                border-right: 4px solid black;
+
+            }
+
+            hr {
+                width: 200px;
+                background-color: darkblue;
+                height: 20px;
+                border: none;
+            }
+
+            h2 {
+                color: red;
+                text-align: center;
+            }
+
+        }
+
+
+
+
+
+        @media (min-width: 1000px) {
+
+            b {
+                background-color: darkblue;
+                color: white;
+                padding: 0.2em;
+                border-radius: 4px;
+            }
+
+
+            .exemplo {
+                max-width: 900px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                margin: 0 auto;
+            }
+
+
+            body {
+                background-image: url(imagens/watercolor.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+
+    <div class="exemplo">
+        <h1>Sobre Desing Responsivo (Responsatividade)</h1>
+
+        <hr>
+        <p>Conjunto de técnicas de desenvolvimento front-end visando a construção de sites em que o layout e a
+            experiência geral de uso funcionem bem em dispositivos com tela de tamanhos variados.</p>
+
+        <p>Existem duas abordagens:</p>
+
+        <h2>Mobile First (é o mais usado)</h2>
+        <p>Foco <b>primeiro em telas pequenas</b></p>
+
+        <h2>Desktop First</h2>
+        <p>Foco <b>primeiro em telas grandes</b></p>
+
+    </div>
+</body>
+
+</html>

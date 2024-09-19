@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+
+*{box-sizing: border-box;}
+
+body { font-family: 'Segoe UI', sans-serif;}
+
+img {max-width: 100%;}
+
+.card {
+    border: solid 1px;
+    padding: 8px;
+    background-color: rgb(141, 165, 198);
+    width: 30%;
+}
+
+.container{ 
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(45, 45, 162);
+    padding: 8px;
+    height: 600px;
+    align-items:center;
+    /* /* Habilitando a "quebra" do container Flexbox. Enquanto houver espaco para os itens (cards) nada muda. Quando acabar o espaco, flex "quebra" e faz com que os para baixo */
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+    <h1>Usando os Recursos do Flexbox</h1>
+    <hr>
+    <p>Flexbox é um mecanismo CSS que permite aplicar facilmente recursos de alinhamento, espaçamento e distribuição de elementos na pagina. Muito útil na elaboração de layouts baseados em linhas/colunas.</p>
+
+<div class="container">
+
+    <div class="card">
+
+        <img src="imagens/mini-apple.jpg" alt="">
+        <h2>Apple</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    </div>
+
+    <div class="card">
+
+        <img src="imagens/mini-apple.jpg" alt="">
+        <h2>Apple</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    </div>
+
+    <div class="card">
+
+        <img src="imagens/mini-ibm.jpg" alt="">
+        <h2>IBM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    </div>
+
+    <div class="card">
+
+        <img src="imagens/mini-ibm.jpg" alt="">
+        <h2>IBM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    </div>
+
+    <div class="card">
+
+        <img src="imagens/mini-microsoft.jpg" alt="">
+        <h2>Microsoft</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    </div>
+
+    <div class="card">
+
+        <img src="imagens/mini-microsoft.jpg" alt="">
+        <h2>Microsoft</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, iste.</p>
+
+    </div>
+
+
+
+</div>
+
+</body>
+
+</html>

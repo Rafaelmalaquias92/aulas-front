@@ -1,0 +1,206 @@
+/* A regra abaixo para o seletor UNIVERSAL
+aplica uma mudança ao comportamento padrão do Box Model.
+isso evitará problemas relacionados a width, padding, height e border dos elementos. SEMPRE USE em seus projetos */
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: red;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../imagens/oriental-tiles.png);
+
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.722);
+    width: 80%;
+    margin: auto;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: rgb(237, 3, 3) 5px 5px 15px inset;
+}
+
+h1 {
+    /* Para o seletor h1, faça propriedades para as seguintes características:
+    - Fonte Impact
+    - Cor de fundo escura com um pouquinho de transparência 
+    - Cor do texto clara
+    - Espaçamento INTERNO APENAS pra cima e pra baixo de 20px
+    - Letras maiúsculas
+    - Texto alinhado no meio
+    - Bordas arredondadas somente embaixo (canto esquerdo inferior e canto direito inferior)
+    - Sombra no texto com a cor e outros valores à sua escolha */
+
+
+
+    font-family: 'Impact', sans-serif;
+    font-weight: normal;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFFF;
+    padding: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-shadow: 5px 5px 5px rgba(248, 1, 1, 0.5);
+
+}
+
+h2 {
+
+    color: blue;
+    font-size: 28px;
+    border-left-style: solid;
+    border-left-width: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    padding-left: 10px;
+    /* padding espaço dentro/interno */
+    margin-left: 10px;
+    /* marging espaço fora/externo */
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Regra com seletor CLASSE */
+.centralizar {
+    text-align: center;
+}
+
+.sombra {
+    text-shadow: violet 1px 1px 3px;
+}
+
+.destaque {
+    background-color: black;
+    color: grey;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* Seletor ID 
+so pode ser usado um por pagina*/
+
+#exemplo {
+    color: red;
+    padding: 4px;
+    border: solid 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Seletor DESCENDENTE */
+p a {
+    background-color: blue;
+    color: white;
+}
+
+nav a {
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    border: solid black 2px;
+    transition: 0.2s;
+    transform: scale(0.7);
+    opacity: 0.6;
+}
+
+nav a:hover {
+    background-color: black;
+    transform: scale(1);
+    opacity: 1;
+}
+
+figure {
+
+    max-width: 450px;
+    margin: auto;
+    text-align: center;
+
+}
+
+figcaption {
+    font-weight: bold;
+    color: darkred;
+    font-size: 18px;
+    text-align: left;
+}
+
+/* Seletor Descendente */
+
+figure img {
+    filter: grayscale();
+    transition: 0.2;
+}
+
+figure img:hover {
+    filter: none;
+}
+
+ul li {
+    font-size: 18px;
+    list-style-image: url(../imagens/item-lista.gif)
+}
+
+ul li::marker {
+    content: "👽";
+}
+
+
+/* Pseudo Classe :first-child 
+Seleciona o primeiro filho de algum elemento */
+ul li:first-child {
+    color: blue;
+    font-weight: bold;
+}
+
+ul li:first-child::marker{
+    content: "🤢";
+}
+
+ul li:last-child{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: blueviolet;
+}
+
+/* Pseudo Classe :nth-child 
+"Enésimo" elemento */
+ul li:nth-child(4){
+color: red;
+font-weight: bold;
+}
+
+ul li:nth-child(4)::marker{
+    content: "🤑";
+}
+
+ul li:last-child::marker{
+    content: "🐸";
+}
+
+/* Grupo de Seletores */
+
+ul li:nth-child(2),
+ul li:nth-child(5),
+ul li:nth-child(9) {
+    font-style: italic;
+}
